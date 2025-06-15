@@ -1,0 +1,56 @@
+<h2>Register as Veterinarian</h2>
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <label>Email:</label>
+  <input type="email" formControlName="email" />
+  @if (submitted && this.f['email'].errors) {
+    <div>Valid email is required</div>
+  }
+
+
+  <label>Username:</label>
+  <input type="text" formControlName="username" />
+  @if (submitted && this.f['username'].errors) {
+    <div>Username is required</div>
+  }
+
+  <label>First Name:</label>
+  <input type="text" formControlName="first_name" />
+  @if (submitted && this.f['first_name'].errors) {
+    <div>First name is required</div>
+  }
+
+  <label>Last Name:</label>
+  <input type="text" formControlName="last_name" />
+  @if (submitted && this.f['last_name'].errors) {
+    <div>Last name is required</div>
+  }
+
+  <label>Phone Number:</label>
+  <input type="text" formControlName="phone_number" />
+  @if (submitted && this.f['phone_number'].errors) {
+    <div>Phone number is required</div>
+  }
+
+  <label>Cabinet Address:</label>
+  <input type="text" formControlName="cabinet_address" />
+  @if (submitted && this.f['cabinet_address'].errors) {
+    <div>Cabinet address is required</div>
+  }
+
+  <label>Password:</label>
+  <input type="password" formControlName="password" />
+  @if (submitted && this.f['password'].errors) {
+    <div>Password is required (min 6 characters)</div>
+  }
+
+  <button type="submit">Register</button>
+</form>
+
+@if (successMessage) {
+  <p class="success">{{ successMessage }}</p>
+}
+
+@if (errorMessage) {
+  <p class="error">{{ errorMessage }}</p>
+}
