@@ -1,0 +1,19 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <input formControlName="email" placeholder="Email">
+  <input formControlName="username" placeholder="Username">
+  <input formControlName="first_name" placeholder="First Name">
+  <input formControlName="last_name" placeholder="Last Name">
+  <input formControlName="password" placeholder="Password" type="password">
+
+  <input formControlName="city" placeholder="City">
+  <input formControlName="street" placeholder="Street">
+  <input formControlName="number" placeholder="Number">
+  <input formControlName="county" placeholder="County">
+  <input formControlName="CNP" placeholder="CNP">
+  <input formControlName="phone_number" placeholder="Phone Number">
+
+  <button type="submit">Register Owner</button>
+
+  <p *ngIf="successMessage">{{ successMessage }}</p>
+  <p *ngIf="errorMessage">{{ errorMessage }}</p>
+</form>
