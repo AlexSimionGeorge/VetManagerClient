@@ -1,0 +1,25 @@
+<h2>Login</h2>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <label>
+    Email or Username:
+    <input formControlName="email_or_username" type="text" />
+  </label>
+  @if (submitted && f['email_or_username'].errors) {
+    <div class="error">Field is required</div>
+  }
+
+  <label>
+    Password:
+    <input formControlName="password" type="password" />
+  </label>
+  @if (submitted && f['password'].errors) {
+    <div class="error">Field is required</div>
+  }
+
+  <button type="submit">Login</button>
+</form>
+
+@if (errorMessage) {
+  <p class="error">{{ errorMessage }}</p>
+}

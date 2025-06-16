@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Owner } from '../models/owner.model';
 import { Observable, tap } from 'rxjs';
 import { environment } from '../../environments/environment';
+import {Owner} from '../models/register.model';
 
 @Injectable({
   providedIn: 'root'

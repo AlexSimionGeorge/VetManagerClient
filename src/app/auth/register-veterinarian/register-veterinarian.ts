@@ -54,7 +54,7 @@ export class RegisterVeterinarianComponent {
       cabinet_address: this.f['cabinet_address'].value
     } as const;
 
-    console.log(veterinarian);
+    //console.log(veterinarian);
 
     this.veterinarianService.registerVeterinarian(veterinarian).subscribe({
       next: () => {

@@ -59,7 +59,7 @@ export class RegisterOwnerComponent {
       phone_number: this.f['phone_number'].value
     } as const;
 
-    console.log(owner);
+    // console.log(owner);
 
     this.ownerService.registerOwner(owner).subscribe({
       next: () => {

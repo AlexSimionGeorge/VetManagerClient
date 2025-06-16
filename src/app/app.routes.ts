@@ -9,4 +9,9 @@ export const routes: Routes = [
     path: 'register-owner',
     loadComponent: () => import('./auth/register-owner/register-owner').then(m => m.RegisterOwnerComponent)
   },
+  {
+    path: 'login',
+    loadComponent: () => import('./auth/login/login').then(m => m.LoginComponent)
+  }
+
 ];

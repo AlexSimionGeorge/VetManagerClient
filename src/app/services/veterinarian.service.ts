@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Veterinarian } from '../models/veterinarian.model';
 import {Observable, tap} from 'rxjs';
-import { environment } from '../../environments/environment'; // ✅ import it
+import { environment } from '../../environments/environment';
+import {Veterinarian} from "../models/register.model"; // ✅ import it
 
 @Injectable({
   providedIn: 'root'
