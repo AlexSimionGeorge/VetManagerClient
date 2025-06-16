@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 import {Owner} from '../models/register.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class OwnerService {
+export class OwnerRegisterService {
   private apiUrl = `${environment.apiBaseUrl}/auth/register/owner/`;
 
   constructor(private http: HttpClient) {}

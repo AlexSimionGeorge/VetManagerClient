@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Observable, tap} from 'rxjs';
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 import {Veterinarian} from "../models/register.model"; // ✅ import it
 
 @Injectable({
   providedIn: 'root'
 })
-export class VeterinarianService {
+export class VeterinarianRegisterService {
 
   private apiUrl = `${environment.apiBaseUrl}/auth/register/veterinarian/`;
 

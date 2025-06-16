@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { LoginService } from '../../services/login.service';
-import { LoginRequest } from '../../models/login.model';
+import { LoginService } from '../services/login.service';
+import { LoginRequest } from '../models/login.model';
 import { Router } from '@angular/router';
 
 @Component({
@@ -48,9 +48,9 @@ export class LoginComponent {
       next: (res) => {
         const role = res.user?.role;
 
-        // localStorage.setItem('access', res.access);
-        // localStorage.setItem('refresh', res.refresh);
-        // localStorage.setItem('user', JSON.stringify(res.user));
+        localStorage.setItem('access', res.access);
+        localStorage.setItem('refresh', res.refresh);
+        localStorage.setItem('user', JSON.stringify(res.user));
 
         if (role === 'owner') {
           this.router.navigate(['/owner/home']);

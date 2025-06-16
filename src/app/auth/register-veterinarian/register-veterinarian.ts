@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { VeterinarianService } from '../../services/veterinarian.service'; // ✅ NEW
+import { VeterinarianRegisterService } from '../services/veterinarian-register.service'; // ✅ NEW
 
 @Component({
   selector: 'app-register-veterinarian',
@@ -18,7 +18,7 @@ export class RegisterVeterinarianComponent {
 
   constructor(
     private fb: FormBuilder,
-    private veterinarianService: VeterinarianService // ✅ inject the service
+    private veterinarianService: VeterinarianRegisterService // ✅ inject the service
   ) {
     this.registerForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],

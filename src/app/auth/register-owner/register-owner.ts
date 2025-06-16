@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { OwnerService } from '../../services/owner.service';
+import { OwnerRegisterService } from '../services/owner-register.service';
 
 @Component({
   selector: 'app-register-owner',
@@ -18,7 +18,7 @@ export class RegisterOwnerComponent {
 
   constructor(
     private fb: FormBuilder,
-    private ownerService: OwnerService
+    private ownerService: OwnerRegisterService
   ) {
     this.registerForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
