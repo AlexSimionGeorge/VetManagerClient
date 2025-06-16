@@ -18,11 +18,11 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/landing/landing').then(m => m.LandingComponent)
   },
   {
-    path: 'owner-home',
-    loadComponent: () => import('./pages/owners/home/owner-home').then(m => m.OwnerHome)
+    path: 'owner',
+    loadChildren: () => import('./pages/owners/owner.routes').then(m => m.ownerRoutes),
   },
   {
-    path: 'vet-home',
-    loadComponent: () => import('./pages/veterinarians/home/vet-home').then(m => m.VetHome)
-  }
+    path: 'vet',
+    loadChildren: () => import('./pages/veterinarians/vet.routes').then(m => m.vetRoutes),
+  },
 ];

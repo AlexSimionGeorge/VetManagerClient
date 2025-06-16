@@ -46,7 +46,19 @@ export class LoginComponent {
 
     this.loginService.login(loginData).subscribe({
       next: (res) => {
-        // future: store tokens, redirect based on role
+        const role = res.user?.role;
+
+        // localStorage.setItem('access', res.access);
+        // localStorage.setItem('refresh', res.refresh);
+        // localStorage.setItem('user', JSON.stringify(res.user));
+
+        if (role === 'owner') {
+          this.router.navigate(['/owner/home']);
+        } else if (role === 'veterinarian') {
+          this.router.navigate(['/vet/home']);
+        } else {
+          this.errorMessage = 'Unknown user role.';
+        }
       },
       error: (err) => {
         console.error(err);

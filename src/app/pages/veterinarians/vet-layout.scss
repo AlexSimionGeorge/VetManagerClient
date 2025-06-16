@@ -1,0 +1,28 @@
+.vet-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.navbar {
+  background-color: #2196F3;
+  padding: 1rem;
+  color: white;
+
+  nav a {
+    margin-right: 1.5rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  .active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #eef2f7;
+}
