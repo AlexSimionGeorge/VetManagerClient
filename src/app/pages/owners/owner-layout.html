@@ -1,7 +1,12 @@
 <div class="owner-layout">
   <header class="navbar">
-    <nav>
-      <a routerLink="/owner/home" routerLinkActive="active">Home</a>
+    <nav class="navbar-content">
+      <div class="nav-left">
+        <a routerLink="/owner/home" routerLinkActive="active">Home</a>
+      </div>
+      <div class="nav-right">
+        <app-logout-button></app-logout-button>
+      </div>
     </nav>
   </header>
 
