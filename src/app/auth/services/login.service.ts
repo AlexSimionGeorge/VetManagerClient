@@ -14,15 +14,10 @@ export class LoginService {
   constructor(private http: HttpClient) {}
 
   login(data: LoginRequest): Observable<LoginResponse> {
-    return this.http.post<LoginResponse>(this.loginUrl, data).pipe(
-      tap(response => console.log('Login response:', response))
-    );
+    return this.http.post<LoginResponse>(this.loginUrl, data);
   }
 
   loginWithGoogle(token: string): Observable<LoginResponse> {
-    console.log("google toke", token);
-    return this.http.post<LoginResponse>(this.googleLoginUrl, { token }).pipe(
-      tap(response => console.log('Google login response:', response))
-    );
+    return this.http.post<LoginResponse>(this.googleLoginUrl, { "google_token" : token });
   }
 }
