@@ -1,0 +1,43 @@
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.7rem;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #115293;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+}
+
+.divider {
+  text-align: center;
+  margin: 1rem 0;
+  font-weight: bold;
+}
