@@ -33,23 +33,20 @@ export class LoginComponent implements AfterViewInit {
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
       const interval = setInterval(() => {
-        // @ts-ignore
-        if (window.google && google.accounts?.id) {
+        if (window.google && window.google.accounts?.id) {
           clearInterval(interval);
 
-          // @ts-ignore
-          google.accounts.id.initialize({
+          window.google.accounts.id.initialize({
             client_id: environment.googleClientId,
-            callback: (response: any) => this.handleGoogleCredential(response),
+            callback: (response) => this.handleGoogleCredential(response),
           });
 
-          // @ts-ignore
-          google.accounts.id.renderButton(
+          window.google.accounts.id.renderButton(
             document.getElementById('google-button'),
             { theme: 'outline', size: 'large' }
           );
         }
-      }, 100); // poll every 100ms
+      }, 100);
     }
   }
 
